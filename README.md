@@ -27,6 +27,8 @@ ceph osd crush rule create-replicated <rule-name> <root> <failure-domain> <class
 ceph osd crush rule list
 ceph osd crush rule dump replicated_rule
 
+ceph osd pool create volumes-ssd 64 replicated_rule-ssd
+
 ```
 
 ### cinder authentication
