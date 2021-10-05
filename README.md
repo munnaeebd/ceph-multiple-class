@@ -10,6 +10,7 @@ rbd list volumes-ssd | wc -l
 ```
 ceph osd pool ls
 ceph osd crush tree --show-shadow
+ceph osd crush rm-device-class osd.20
 ceph osd crush set-device-class nvme osd.20
 ```
 ## Now we need to be sure ceph doesn't default the devices, so we disable the update on start. This will allow us to modify classes as they won't be set when they come up.
