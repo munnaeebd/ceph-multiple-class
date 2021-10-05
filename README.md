@@ -32,6 +32,14 @@ ceph osd pool create volumes-ssd 64 replicated_rule-ssd
 
 ```
 
+## Before Adding new device:, in admin node it will not set device class automatically
+```
+vi  /home/ceph-cloud/ceph-cluster/ceph.conf
+[osd]
+osd_class_update_on_start = false
+
+```
+
 ### cinder authentication
 ```
 ceph auth ls
