@@ -29,6 +29,11 @@ ceph osd crush rule list
 ceph osd crush rule dump replicated_rule
 
 ceph osd pool create volumes-ssd 64 replicated_rule-ssd
+ceph osd pool set volumes-nvme size 2
+
+not sure
+ceph osd pool create <pool_name> <pg_num> --size=<replica_size>
+
 
 ```
 
