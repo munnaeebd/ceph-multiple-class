@@ -53,6 +53,10 @@ ceph auth ls
 ceph auth get client.cinder
 
 ceph auth caps client.cinder mon 'allow r'  osd 'allow rwx pool=volumes-ssd, allow rwx pool=volumes, allow rwx pool=vms, allow rx pool=images'
+
+## New: 
+ceph auth caps client.cinder mon 'allow r'  osd 'allow class-read object_prefix rbd_children, allow rwx pool=volumes-ssd, allow rwx pool=volumes, allow rwx pool=vms, allow rx pool=images'
+
 ```
 ##Restart cinder volume service in compute node
 
